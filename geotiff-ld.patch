@@ -1,0 +1,12 @@
+diff -ur libgeotiff-1.2.5/Makefile.in libgeotiff-1.2.5.new/Makefile.in
+--- libgeotiff-1.2.5/Makefile.in	2008-05-09 20:37:46.000000000 +0200
++++ libgeotiff-1.2.5.new/Makefile.in	2009-07-22 16:04:53.000000000 +0200
+@@ -38,7 +38,7 @@
+ GEOTIFF_SO=@GEOTIFF_SO@
+ GEOTIFF_DLL=@GEOTIFF_DLL@
+ GEOTIFF_IMP=@GEOTIFF_IMP@
+-LD_SHARED=@LD_SHARED@
++LD_SHARED= $(CC) -shared
+ SO_EXT=@SO_EXT@
+ 
+ GT_INCLUDE_FILES = xtiffio.h geotiff.h geotiffio.h geovalues.h \
