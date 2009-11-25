@@ -1,0 +1,20 @@
+diff -ur libgeotiff-1.2.5/Makefile.in libgeotiff-1.2.5.new/Makefile.in
+--- libgeotiff-1.2.5/Makefile.in	2008-05-09 20:37:46.000000000 +0200
++++ libgeotiff-1.2.5.new/Makefile.in	2009-11-25 01:26:46.968750000 +0100
+@@ -189,7 +189,7 @@
+ 
+ install:
+ 	$(INSTALL) -d $(DESTDIR)$(libdir)
+-	$(INSTALL) libgeotiff.a $(GEOTIFF_IMP) $(DESTDIR)${libdir}
++	$(INSTALL) libgeotiff.a $(DESTDIR)${libdir}
+ 	$(INSTALL) -d $(DESTDIR)$(includedir)
+ 	$(INSTALL) $(GT_INCLUDE_FILES) $(DESTDIR)$(includedir)
+ 	$(INSTALL) -d $(DESTDIR)$(datadir)
+@@ -199,6 +199,7 @@
+ 	if test ! -z "$(GEOTIFF_SO)" ; then \
+ 		if test ! -z "$(GEOTIFF_DLL)" ; then \
+ 			$(INSTALL) $(GEOTIFF_SO) $(DESTDIR)${bindir}; \
++            $(INSTALL) libgeotiff.dll $(DESTDIR)${libdir}; \
+ 		else \
+ 			$(INSTALL) $(GEOTIFF_SO) $(DESTDIR)${libdir}; \
+ 			(cd $(DESTDIR)${libdir} ; \
